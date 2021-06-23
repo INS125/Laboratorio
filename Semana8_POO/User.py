@@ -3,17 +3,29 @@ class Horario():
         self.dato = dato
         self.dato2 = dato2
 
-class User(object):
-    def __init__(self, name, username, horario):
-        self.name = name
-        self.username = username
-        self.horario = horario
+class Usuario():
+    def __init__(self, identificador, nombre):
+        self.identificador = identificador
+        self.nombre = nombre
+        self.marcas = list()
+        self.planificaciones = list()
+        
+    def Marcar(self, marca):
+        #Agregar su marca
+        pass
 
-import json
-#j = json.loads('{"name":"Joaquin","username":"Joako" }')
-#u = User(**j)
+    def Informe(self):
+        with open (f"{self.identificador}.txt","w") as file_out:
+            file_out.write(f"{self.nombre}\n")
+        
 
+
+def crearInforme():
+    pass
 
 h = Horario("hola","hola2")
-u = User("nico", "luster", h)
-print(json.dumps(u.__dict__))
+u_1 = Usuario("111-1", "nico")
+u_1.Informe()
+
+u_2 = Usuario("222-2", "Ignacio")
+u_2.Informe()
