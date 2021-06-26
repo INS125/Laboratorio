@@ -41,8 +41,11 @@ mi_gato_uno = Gato("Ryu", "cafe", "Macho", "cualquiera")
 mi_gato_dos = Gato("Bito", "Black", "Macho", "cualquiera")
 mi_gato_tres = Gato("Julieta", "Negro", "Hembra", "cualquiera")
 
-gatos = [mi_gato_uno, mi_gato_dos, mi_gato_tres]
-
+#gatos = [mi_gato_uno, mi_gato_dos, mi_gato_tres]
+gatos = []
+gatos.append(mi_gato_uno)
+gatos.append(mi_gato_dos)
+gatos.append(mi_gato_tres)
 #Agregar comida solo a Ryu
 for gato in gatos:
     if gato.nombre == "Ryu":
